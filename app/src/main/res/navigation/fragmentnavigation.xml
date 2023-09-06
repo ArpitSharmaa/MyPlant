@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentnavigation"
+    app:startDestination="@id/lOGINFRAGMENT">
+
+    <fragment
+        android:id="@+id/imageCapture"
+        android:name="com.example.myplant.ImageCapture"
+        android:label="fragment_image_capture"
+        tools:layout="@layout/fragment_image_capture" >
+        <action
+            android:id="@+id/action_imageCapture_to_resultlist"
+            app:destination="@id/resultlist" />
+    </fragment>
+    <fragment
+        android:id="@+id/plantInfo"
+        android:name="com.example.myplant.PlantInfo"
+        android:label="fragment_plant_info"
+        tools:layout="@layout/fragment_plant_info" />
+    <fragment
+        android:id="@+id/resultlist"
+        android:name="com.example.myplant.resultlist"
+        android:label="fragment_resultlist"
+        tools:layout="@layout/fragment_resultlist" />
+    <fragment
+        android:id="@+id/listfrag"
+        android:name="com.example.myplant.listfrag"
+        android:label="fragment_listfrag"
+        tools:layout="@layout/fragment_listfrag" >
+        <action
+            android:id="@+id/action_listfrag_to_plantInfo"
+            app:destination="@id/plantInfo" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchByNameFragment"
+        android:name="com.example.myplant.SearchByNameFragment"
+        android:label="fragment_search_by_name"
+        tools:layout="@layout/fragment_search_by_name" >
+        <action
+            android:id="@+id/action_searchByNameFragment_to_listfrag"
+            app:destination="@id/listfrag" />
+        <action
+            android:id="@+id/action_searchByNameFragment_to_imageCapture"
+            app:destination="@id/imageCapture" />
+        <action
+            android:id="@+id/action_searchByNameFragment_to_lOGINFRAGMENT"
+            app:destination="@id/lOGINFRAGMENT" />
+    </fragment>
+    <fragment
+        android:id="@+id/lOGINFRAGMENT"
+        android:name="com.example.myplant.lOGINFRAGMENT"
+        android:label="fragment_l_o_g_i_n_f_r_a_g_m_e_n_t"
+        tools:layout="@layout/fragment_l_o_g_i_n_f_r_a_g_m_e_n_t" >
+        <action
+            android:id="@+id/action_lOGINFRAGMENT_to_searchByNameFragment"
+            app:destination="@id/searchByNameFragment" />
+    </fragment>
+</navigation>

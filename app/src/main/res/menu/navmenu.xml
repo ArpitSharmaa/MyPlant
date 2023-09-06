@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view"
+    >
+    <item android:title="Search Online" >
+        <menu>
+            <item android:title="capture img"
+                android:id="@+id/captureimg"/>
+            <item android:title="upload from galary"
+                android:id="@+id/upload"/>
+        </menu>
+    </item>
+    <item android:title="Search in data base"
+        android:id="@+id/searchindatabase"/>
+    <item android:title="Profile" ><menu>
+        <item android:title="LogOut"
+            android:id="@+id/logout"/>
+    </menu>
+
+    </item>
+
+</menu>
